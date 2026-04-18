@@ -45,7 +45,9 @@ jobs:
           cp -r publish/wwwroot/* ./_site/app/
           
           # Fix base href for GitHub Pages subdirectory
-          sed -i 's|<base href="/" />|<base href="/agent-lab-dotnet/app/" />|g' ./_site/app/index.html
+          # Extract repo name from GITHUB_REPOSITORY (format: owner/repo)
+          REPO_NAME=$(echo ${{ github.repository }} | cut -d'/' -f2)
+          sed -i "s|<base href=\"/\" />|<base href=\"/${REPO_NAME}/app/\" />|g" ./_site/app/index.html
           
           # Prevent Jekyll processing
           touch ./_site/.nojekyll
