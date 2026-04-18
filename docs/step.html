@@ -217,7 +217,25 @@
 
         // Base URL for fetching markdown from GitHub
         const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' || window.location.protocol === 'file:';
-        const GITHUB_RAW_BASE = isLocal ? '../workshop/' : 'https://raw.githubusercontent.com/copilot-dev-days/agent-lab-dotnet/main/workshop/';
+        let GITHUB_RAW_BASE;
+        if (isLocal) {
+            GITHUB_RAW_BASE = '../workshop/';
+        } else {
+            // Detect GitHub Pages deployment and construct dynamic GitHub Raw URL
+            const hostname = window.location.hostname;
+            const pathname = window.location.pathname;
+            if (hostname.includes('github.io')) {
+                // Extract username from hostname (e.g., "canyu-liu" from "canyu-liu.github.io")
+                const username = hostname.split('.')[0];
+                // Extract repo name from pathname (first segment for username.github.io/repo-name/)
+                const pathSegments = pathname.split('/').filter(Boolean);
+                const repoName = pathSegments.length > 0 ? pathSegments[0] : 'agent-lab-dotnet';
+                GITHUB_RAW_BASE = `https://raw.githubusercontent.com/${username}/${repoName}/main/workshop/`;
+            } else {
+                // Fallback for non-GitHub Pages deployments
+                GITHUB_RAW_BASE = 'https://raw.githubusercontent.com/copilot-dev-days/agent-lab-dotnet/main/workshop/';
+            }
+        }
 
         // Get current step from URL
         function getCurrentStepId() {
