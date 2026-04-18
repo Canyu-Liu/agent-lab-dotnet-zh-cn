@@ -1,6 +1,6 @@
 # 🎮 VS Code GitHub Copilot Agent Lab
 
-[🎮 运行游戏](https://dotnet-presentations.github.io/vscode-github-copilot-agent-lab/) • [📚 实验指南](https://dotnet-presentations.github.io/vscode-github-copilot-agent-lab/docs/) • [← README](../README.md)
+[🎮 运行游戏](../docs/) • [📚 实验指南](../docs/step.html) • [← README](../README.md)
 
 ---
 

@@ -1,6 +1,6 @@
 # 第 4 部分：多智能体开发
 
-[🎮 在线演示](https://dotnet-presentations.github.io/vscode-github-copilot-agent-lab/) • [📚 实验指南](GUIDE.md) • [← 第 3 部分](03-quiz-master.md)
+[🎮 在线演示](../docs/) • [📚 实验指南](../docs/step.html) • [← 第 3 部分](03-quiz-master.md)
 
 ---
 

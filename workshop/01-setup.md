@@ -1,6 +1,6 @@
 # 第 1 部分：环境准备与上下文工程
 
-[🎮 在线演示](https://dotnet-presentations.github.io/vscode-github-copilot-agent-lab/) • [📚 实验指南](https://dotnet-presentations.github.io/vscode-github-copilot-agent-lab/docs/) • [← 总览](00-overview.md)
+[🎮 在线演示](../docs/) • [📚 实验指南](../docs/step.html) • [← 总览](00-overview.md)
 
 ---
 
@@ -14,8 +14,8 @@
 
 ### 步骤 1：创建你的仓库
 
-1. 打开 [github.com/copilot-dev-days/agent-lab-dotnet](https://github.com/copilot-dev-days/agent-lab-dotnet)
-2. 点击 **Use this template** → **Create a new repository**
+1. 打开本仓库并点击 **Use this template** → **Create a new repository**
+2. 创建你的仓库（例如 `my-soc-ops-csharp`）
    - Name: `my-soc-ops-csharp`
    - Visibility: **Public**
 3. ✅ 你的 Soc Ops 仓库创建完成

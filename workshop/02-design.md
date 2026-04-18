@@ -1,6 +1,6 @@
 # 第 2 部分：设计优先前端
 
-[🎮 在线演示](https://dotnet-presentations.github.io/vscode-github-copilot-agent-lab/) • [📚 实验指南](https://dotnet-presentations.github.io/vscode-github-copilot-agent-lab/docs/) • [← 第 1 部分](01-setup.md)
+[🎮 在线演示](../docs/) • [📚 实验指南](../docs/step.html) • [← 第 1 部分](01-setup.md)
 
 ---
 

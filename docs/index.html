@@ -156,7 +156,7 @@
         <!-- Footer -->
         <footer>
             <div class="footer-links">
-                <a href="https://github.com/copilot-dev-days/agent-lab-dotnet">GitHub Repository</a>
+                <a href="https://github.com/copilot-dev-days/agent-lab-dotnet" class="repo-footer-link">GitHub Repository</a>
                 <a href="https://www.youtube.com/code">VS Code YouTube</a>
                 <a href="https://code.visualstudio.com/docs/copilot/overview">Copilot Docs</a>
                 <a href="https://github.com/github/awesome-copilot">Awesome Copilot</a>
@@ -178,9 +178,16 @@
                 const repoName = pathSegments.length > 0 ? pathSegments[0] : 'agent-lab-dotnet';
                 const repoUrl = `https://github.com/${username}/${repoName}`;
                 
+                // Update hero repo link
                 const repoLink = document.getElementById('repo-link');
                 if (repoLink) {
                     repoLink.href = repoUrl;
+                }
+                
+                // Update footer repo link
+                const footerLink = document.querySelector('.repo-footer-link');
+                if (footerLink) {
+                    footerLink.href = repoUrl;
                 }
             }
         })();

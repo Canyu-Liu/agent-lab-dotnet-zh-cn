@@ -2,7 +2,7 @@
 
 适合线下交流活动的社交宾果游戏。找到符合题目的人，并连成 5 个即可获胜！
 
-🎮 **[开始游戏](https://dotnet-presentations.github.io/vscode-github-copilot-agent-lab/)** • 📚 **[查看实验指南](https://dotnet-presentations.github.io/vscode-github-copilot-agent-lab/docs/)**
+🎮 **[开始游戏](./docs/)** • 📚 **[查看实验指南](./docs/step.html?step=00-overview)**
 
 **翻译说明**：此项目为社区翻译的版本，在 GitHub Copilot Dev Days Nanning 活动中使用。
 
@@ -12,11 +12,11 @@
 
 | 部分 | 标题 |
 |------|------|
-| [**00**](https://dotnet-presentations.github.io/vscode-github-copilot-agent-lab/docs/step.html?step=00-overview) | 概览与检查清单 |
-| [**01**](https://dotnet-presentations.github.io/vscode-github-copilot-agent-lab/docs/step.html?step=01-setup) | 环境搭建与上下文工程 |
-| [**02**](https://dotnet-presentations.github.io/vscode-github-copilot-agent-lab/docs/step.html?step=02-design) | 先设计，后前端 |
-| [**03**](https://dotnet-presentations.github.io/vscode-github-copilot-agent-lab/docs/step.html?step=03-quiz-master) | 自定义问答主持人 |
-| [**04**](https://dotnet-presentations.github.io/vscode-github-copilot-agent-lab/docs/step.html?step=04-multi-agent) | 多智能体开发 |
+| [**00**](./docs/step.html?step=00-overview) | 概览与检查清单 |
+| [**01**](./docs/step.html?step=01-setup) | 环境搭建与上下文工程 |
+| [**02**](./docs/step.html?step=02-design) | 先设计，后前端 |
+| [**03**](./docs/step.html?step=03-quiz-master) | 自定义问答主持人 |
+| [**04**](./docs/step.html?step=04-multi-agent) | 多智能体开发 |
 
 > 📝 这些实验指南也可以在 [`workshop/`](workshop/) 文件夹中离线阅读。
 
