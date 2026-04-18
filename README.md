@@ -1,41 +1,43 @@
 # Soc Ops
 
-Social Bingo game for in-person mixers. Find people who match the questions and get 5 in a row!
+适合线下交流活动的社交宾果游戏。找到符合题目的人，并连成 5 个即可获胜！
 
-🎮 **[Play the Game](https://dotnet-presentations.github.io/vscode-github-copilot-agent-lab/)** • 📚 **[View Lab Guide](https://dotnet-presentations.github.io/vscode-github-copilot-agent-lab/docs/)**
+🎮 **[开始游戏](https://dotnet-presentations.github.io/vscode-github-copilot-agent-lab/)** • 📚 **[查看实验指南](https://dotnet-presentations.github.io/vscode-github-copilot-agent-lab/docs/)**
 
----
-
-## 📚 Lab Guide
-
-| Part | Title |
-|------|-------|
-| [**00**](https://dotnet-presentations.github.io/vscode-github-copilot-agent-lab/docs/step.html?step=00-overview) | Overview & Checklist |
-| [**01**](https://dotnet-presentations.github.io/vscode-github-copilot-agent-lab/docs/step.html?step=01-setup) | Setup & Context Engineering |
-| [**02**](https://dotnet-presentations.github.io/vscode-github-copilot-agent-lab/docs/step.html?step=02-design) | Design-First Frontend |
-| [**03**](https://dotnet-presentations.github.io/vscode-github-copilot-agent-lab/docs/step.html?step=03-quiz-master) | Custom Quiz Master |
-| [**04**](https://dotnet-presentations.github.io/vscode-github-copilot-agent-lab/docs/step.html?step=04-multi-agent) | Multi-Agent Development |
-
-> 📝 Lab guides are also available in the [`workshop/`](workshop/) folder for offline reading.
+**翻译说明**：此项目为社区翻译的版本，在 GitHub Copilot Dev Days Nanning 活动中使用。
 
 ---
 
-## Prerequisites
+## 📚 实验指南
 
-- [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0) or higher
+| 部分 | 标题 |
+|------|------|
+| [**00**](https://dotnet-presentations.github.io/vscode-github-copilot-agent-lab/docs/step.html?step=00-overview) | 概览与检查清单 |
+| [**01**](https://dotnet-presentations.github.io/vscode-github-copilot-agent-lab/docs/step.html?step=01-setup) | 环境搭建与上下文工程 |
+| [**02**](https://dotnet-presentations.github.io/vscode-github-copilot-agent-lab/docs/step.html?step=02-design) | 先设计，后前端 |
+| [**03**](https://dotnet-presentations.github.io/vscode-github-copilot-agent-lab/docs/step.html?step=03-quiz-master) | 自定义问答主持人 |
+| [**04**](https://dotnet-presentations.github.io/vscode-github-copilot-agent-lab/docs/step.html?step=04-multi-agent) | 多智能体开发 |
 
-## Run
+> 📝 这些实验指南也可以在 [`workshop/`](workshop/) 文件夹中离线阅读。
+
+---
+
+## 前置条件
+
+- [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0) 或更高版本
+
+## 运行
 
 ```bash
 cd SocOps
 dotnet run
 ```
 
-## Build
+## 构建
 
 ```bash
 cd SocOps
 dotnet build
 ```
 
-Deploys automatically to GitHub Pages on push to `main`.
+推送到 `main` 分支后会自动部署到 GitHub Pages。

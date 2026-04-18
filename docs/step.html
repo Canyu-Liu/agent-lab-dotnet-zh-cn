@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
 <head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-LSC44NDPLQ"></script>
@@ -28,9 +28,9 @@
                 <span class="header-title">VS Code Copilot Agent Lab</span>
             </a>
             <nav class="header-nav">
-                <button class="theme-toggle" onclick="toggleTheme()">☀️ Light</button>
-                <button class="nav-btn" id="prevBtn" disabled>← Previous</button>
-                <button class="nav-btn" id="nextBtn">Next →</button>
+                <button class="theme-toggle" onclick="toggleTheme()">☀️ 浅色</button>
+                <button class="nav-btn" id="prevBtn" disabled>← 上一步</button>
+                <button class="nav-btn" id="nextBtn">下一步 →</button>
             </nav>
         </div>
     </header>
@@ -38,7 +38,7 @@
     <div class="layout">
         <aside class="sidebar">
             <div class="sidebar-section">
-                <div class="sidebar-title">Lab Parts</div>
+                <div class="sidebar-title">工作坊章节</div>
                 <nav id="stepNav"></nav>
             </div>
         </aside>
@@ -46,11 +46,11 @@
         <main class="main">
             <article class="content">
                 <div id="markdown-content" class="markdown">
-                    <div class="loading">Loading content</div>
+                    <div class="loading">正在加载内容</div>
                 </div>
                 <nav class="nav-footer">
-                    <a href="#" class="nav-footer-btn disabled" id="prevLink">← Previous</a>
-                    <a href="#" class="nav-footer-btn" id="nextLink">Next →</a>
+                    <a href="#" class="nav-footer-btn disabled" id="prevLink">← 上一步</a>
+                    <a href="#" class="nav-footer-btn" id="nextLink">下一步 →</a>
                 </nav>
             </article>
         </main>
@@ -60,13 +60,13 @@
     <script>
         // Define all steps in order
         const steps = [
-            { id: 'guide', file: 'GUIDE.md', title: 'Quick Reference', number: '📚' },
-            { id: '00-overview', file: '00-overview.md', title: 'Overview & Checklist', number: '00' },
-            { id: '01-setup', file: '01-setup.md', title: 'Setup & Context Engineering', number: '01' },
-            { id: '02-design', file: '02-design.md', title: 'Design-First Frontend', number: '02' },
-            { id: '03-quiz-master', file: '03-quiz-master.md', title: 'Custom Quiz Master', number: '03' },
-            { id: '04-multi-agent', file: '04-multi-agent.md', title: 'Multi-Agent Development', number: '04' },
-            { id: '05-complete', file: '05-complete.md', title: '🎉 Complete!', number: '🎉' },
+            { id: 'guide', file: 'GUIDE.md', title: '快速参考', number: '📚' },
+            { id: '00-overview', file: '00-overview.md', title: '总览与检查清单', number: '00' },
+            { id: '01-setup', file: '01-setup.md', title: '环境准备与上下文工程', number: '01' },
+            { id: '02-design', file: '02-design.md', title: '设计优先前端', number: '02' },
+            { id: '03-quiz-master', file: '03-quiz-master.md', title: '自定义 Quiz Master', number: '03' },
+            { id: '04-multi-agent', file: '04-multi-agent.md', title: '多智能体开发', number: '04' },
+            { id: '05-complete', file: '05-complete.md', title: '🎉 完成！', number: '🎉' },
         ];
 
         // Confetti celebration function
@@ -127,7 +127,7 @@
         // Epic emoji explosion!
         function triggerEpicExplosion() {
             const emojis = ['🚀', '⭐', '🎮', '💜', '🔥', '✨', '🎯', '💻', '🤖', '🧠', '🎨', '🏆', '👾', '🌟', '💎', '🦄'];
-            
+
             // Screen flash
             const flash = document.createElement('div');
             flash.style.cssText = `
@@ -175,7 +175,7 @@
                     const distance = 200 + Math.random() * 400;
                     const tx = Math.cos(angle) * distance;
                     const ty = Math.sin(angle) * distance - 100;
-                    
+
                     emoji.textContent = emojis[Math.floor(Math.random() * emojis.length)];
                     emoji.style.cssText = `
                         position: fixed;
@@ -234,7 +234,7 @@
         function buildSidebar() {
             const nav = document.getElementById('stepNav');
             const currentId = getCurrentStepId();
-            
+
             nav.innerHTML = steps.map(step => `
                 <a href="?step=${step.id}" class="step-link ${step.id === currentId ? 'active' : ''}">
                     <span class="step-number">${step.number}</span>
@@ -265,7 +265,7 @@
                 prevLink.classList.remove('disabled');
             } else {
                 prevLink.classList.add('disabled');
-                prevLink.textContent = '← Previous';
+                prevLink.textContent = '← 上一步';
             }
 
             if (idx < steps.length - 1) {
@@ -274,7 +274,7 @@
                 nextLink.classList.remove('disabled');
             } else {
                 nextLink.classList.add('disabled');
-                nextLink.textContent = 'Next →';
+                nextLink.textContent = '下一步 →';
             }
         }
 
@@ -283,25 +283,30 @@
             // Remove the header navigation bar (we have our own sidebar)
             md = md.replace(/\[🎮 Live Demo\][^\n]+\n+---/g, '');
             md = md.replace(/\[🎮 Live Demo\][^\n]+/g, '');
-            
+            md = md.replace(/\[🎮 在线演示\][^\n]+\n+---/g, '');
+            md = md.replace(/\[🎮 在线演示\][^\n]+/g, '');
+
             // Remove footer navigation (we have our own)
             md = md.replace(/---\s*\n\s*\[🎮 Live Demo\][^\n]+\n\s*👉[^\n]+/g, '');
             md = md.replace(/👉 \*\*\[Continue to[^\n]+/g, '');
             md = md.replace(/👉 \*\*\[Start with[^\n]+/g, '');
-            
+            md = md.replace(/---\s*\n\s*\[🎮 在线演示\][^\n]+\n\s*👉[^\n]+/g, '');
+            md = md.replace(/👉 \*\*\[继续到[^\n]+/g, '');
+            md = md.replace(/👉 \*\*\[从[^\n]+/g, '');
+
             // Convert internal markdown links to step viewer links
             md = md.replace(/\]\((\d+)-([^)]+)\.md\)/g, '](step.html?step=$1-$2)');
             md = md.replace(/\]\(GUIDE\.md\)/g, '](step.html?step=guide)');
-            
+
             // Handle GitHub-style alerts
-            md = md.replace(/>\s*\[!NOTE\]\s*\n/gi, '> **📝 Note**\n>\n');
-            md = md.replace(/>\s*\[!TIP\]\s*\n/gi, '> **💡 Tip**\n>\n');
-            md = md.replace(/>\s*\[!IMPORTANT\]\s*\n/gi, '> **⚠️ Important**\n>\n');
-            md = md.replace(/>\s*💡\s*\*\*Tip:\*\*/gi, '> **💡 Tip**');
+            md = md.replace(/>\s*\[!NOTE\]\s*\n/gi, '> **📝 说明**\n>\n');
+            md = md.replace(/>\s*\[!TIP\]\s*\n/gi, '> **💡 提示**\n>\n');
+            md = md.replace(/>\s*\[!IMPORTANT\]\s*\n/gi, '> **⚠️ 重要**\n>\n');
+            md = md.replace(/>\s*💡\s*\*\*Tip:\*\*/gi, '> **💡 提示**');
 
             // Clean up multiple consecutive horizontal rules
             md = md.replace(/---\s*\n\s*---/g, '---');
-            
+
             return md;
         }
 
@@ -309,7 +314,7 @@
         async function loadContent() {
             const idx = getCurrentStepIndex();
             if (idx === -1) {
-                document.getElementById('markdown-content').innerHTML = '<p>Step not found. <a href="?step=00-overview">Go to Overview</a></p>';
+                document.getElementById('markdown-content').innerHTML = '<p>未找到该步骤。<a href="?step=00-overview">前往总览</a></p>';
                 return;
             }
 
@@ -318,8 +323,8 @@
 
             try {
                 const response = await fetch(`${GITHUB_RAW_BASE}${step.file}`);
-                if (!response.ok) throw new Error('Failed to load');
-                
+                if (!response.ok) throw new Error('加载失败');
+
                 let md = await response.text();
                 md = processMarkdown(md);
 
@@ -329,7 +334,7 @@
                     const cleanPath = path.replace(/^\.\//, '');
                     return `![${alt}](${GITHUB_RAW_BASE}${stepDir}${cleanPath})`;
                 });
-                
+
                 // Configure marked
                 marked.setOptions({
                     breaks: true,
@@ -342,7 +347,7 @@
                 if (step.id === '05-complete') {
                     // Trigger celebration on load
                     setTimeout(celebrate, 500);
-                    
+
                     // Add the confetti button
                     const btnContainer = document.getElementById('confetti-btn-container');
                     if (btnContainer) {
@@ -358,18 +363,18 @@
                                 cursor: pointer;
                                 margin: 1rem 0;
                                 transition: transform 0.2s, box-shadow 0.2s;
-                            " onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 10px 40px rgba(0,245,255,0.4)';" 
+                            " onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 10px 40px rgba(0,245,255,0.4)';"
                                onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none';">
-                                🎊 More Confetti! 🎊
+                                🎊 再来点彩带！🎊
                             </button>
                         `;
                     }
                 }
             } catch (error) {
                 document.getElementById('markdown-content').innerHTML = `
-                    <h1>Error Loading Content</h1>
-                    <p>Could not load ${step.file}. Please check your internet connection.</p>
-                    <p><a href="index.html">Return to home</a></p>
+                    <h1>内容加载失败</h1>
+                    <p>无法加载 ${step.file}，请检查网络连接。</p>
+                    <p><a href="index.html">返回首页</a></p>
                 `;
             }
         }

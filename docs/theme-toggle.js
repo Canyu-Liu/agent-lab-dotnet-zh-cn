@@ -18,7 +18,7 @@ function updateToggleIcon() {
     const btn = document.querySelector('.theme-toggle');
     if (!btn) return;
     const isLight = document.documentElement.getAttribute('data-theme') === 'light';
-    btn.innerHTML = isLight ? '🌙 Dark' : '☀️ Light';
+    btn.innerHTML = isLight ? '🌙 深色' : '☀️ 浅色';
 }
 
 document.addEventListener('DOMContentLoaded', updateToggleIcon);

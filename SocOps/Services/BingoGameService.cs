@@ -7,7 +7,7 @@ namespace SocOps.Services;
 public class BingoGameService
 {
     private const string STORAGE_KEY = "bingo-game-state";
-    private const int STORAGE_VERSION = 1;
+    private const int STORAGE_VERSION = 2;
 
     private readonly IJSRuntime _jsRuntime;
 

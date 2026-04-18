@@ -1,151 +1,151 @@
-# Part 4: Multi-Agent Development
+# 第 4 部分：多智能体开发
 
-[🎮 Live Demo](https://dotnet-presentations.github.io/vscode-github-copilot-agent-lab/) • [📚 Lab Guide](GUIDE.md) • [← Part 3](03-quiz-master.md)
-
----
-
-> ⏱️ **Time:** ~20 minutes
-
-Build new features using specialized agents: TDD agents for reliable code, and design agents for beautiful UI.
+[🎮 在线演示](https://dotnet-presentations.github.io/vscode-github-copilot-agent-lab/) • [📚 实验指南](GUIDE.md) • [← 第 3 部分](03-quiz-master.md)
 
 ---
 
-## 🧪 Task 1: Scavenger Hunt Mode (TDD-Driven)
+> ⏱️ **时长：** 约 20 分钟
 
-Custom agents with handoffs break complex workflows into smaller steps, keeping you in control for critical decisions.
+使用专长型智能体开发新功能：用 TDD 智能体保证质量，用设计智能体打磨 UI。
 
-### What We're Building
+---
 
-A new **Scavenger Hunt** mode:
-- Same questions as bingo
-- Displayed as a simple checklist
-- Progress meter at the top
-- Click to mark items complete
+## 🧪 任务 1：寻宝模式（TDD 驱动）
 
-### Steps
+通过自定义智能体交接复杂流程，把大任务拆成小步骤，同时保留关键决策控制权。
 
-#### Phase 1: Plan
+### 我们要构建什么
 
-1. Start a new Chat in **Plan Mode**
-2. Enter:
+新增 **Scavenger Hunt（寻宝）** 模式：
+- 使用与宾果相同的问题
+- 以简洁清单形式展示
+- 顶部显示进度条
+- 点击即可标记完成
+
+### 步骤
+
+#### 阶段 1：Plan 规划
+
+1. 在 **Plan Mode** 新建 Chat
+2. 输入：
    ```
    Add a new Scavenger Hunt mode: same questions, but shown as a 
    simple list with checkboxes and a progress meter
    ```
-3. **Iterate on the plan** — check that it:
-   - ✅ Adds the mode to the start screen
-   - ✅ Creates a new component for the list view
-   - ✅ Includes a progress indicator
-   - ❌ Doesn't go overboard with features
+3. **迭代计划**，确保它：
+   - ✅ 在开始界面增加模式入口
+   - ✅ 新建清单视图组件
+   - ✅ 包含进度指示
+   - ❌ 不要过度堆叠功能
 
-#### Phase 2: TDD Red (Write Failing Tests)
+#### 阶段 2：TDD Red（先写失败测试）
 
-1. Select **TDD Red** agent
-2. Click **Start**
-3. Watch as it writes tests for:
-   - Component rendering
-   - Checkbox interactions
-   - Progress calculation
-   - State management
+1. 选择 **TDD Red** 智能体
+2. 点击 **Start**
+3. 观察其生成测试，覆盖：
+   - 组件渲染
+   - 复选框交互
+   - 进度计算
+   - 状态管理
 
-4. Check VS Code's **Test Explorer** to see the failing tests
+4. 在 VS Code 的 **Test Explorer** 查看失败测试
 
-#### Phase 3: TDD Green (Make Tests Pass)
+#### 阶段 3：TDD Green（让测试通过）
 
-1. When Red is done, select **TDD Green** agent
-2. Watch as it:
-   - Implements the minimum code to pass tests
-   - Runs tests after each change
-   - Iterates until all tests pass
+1. Red 完成后切换到 **TDD Green** 智能体
+2. 观察其：
+   - 以最小实现让测试通过
+   - 每次变更后运行测试
+   - 持续迭代直到全部通过
 
-#### Phase 4: Refactor (Clean Up)
+#### 阶段 4：Refactor（重构整理）
 
-1. Select **TDD Refactor** agent
-2. Let it clean up the code while keeping tests green
+1. 选择 **TDD Refactor** 智能体
+2. 在保持测试为绿色的前提下清理代码
 
-### Checkpoint Recovery
+### 检查点恢复
 
-If something goes wrong:
-1. Use Chat **Checkpoints** to revert
-2. Reset to before "TDD Red" started
-3. Try again with adjusted prompts
+如果中途出问题：
+1. 用 Chat **Checkpoints** 回退
+2. 回到 “TDD Red” 之前的状态
+3. 调整提示词后重试
 
-> 💡 **Bonus:** Try **TDD Supervisor** for a fully automated TDD flow
+> 💡 **加分项：** 试试 **TDD Supervisor**，可一键编排完整 TDD 流程
 
-✅ **Result:** A fully tested Scavenger Hunt feature built with disciplined TDD!
+✅ **结果：** 用规范 TDD 流程完成并验证“寻宝模式”。
 
 ---
 
-## 🎴 Task 2: Card Deck Mode (Design-Driven)
+## 🎴 任务 2：卡组模式（设计驱动）
 
-Use the **Pixel Jam** agent to focus on UI iteration while building new features.
+使用 **Pixel Jam** 智能体，在构建新功能时优先迭代 UI 体验。
 
-### What We're Building
+### 我们要构建什么
 
-A new **Card Deck Shuffle** mode:
-- Player opens the game
-- Taps to get a random card
-- Card flips with animation
-- Shows a question to discuss
+新增 **Card Deck Shuffle（卡组洗牌）** 模式：
+- 玩家进入游戏
+- 点击后抽取随机卡片
+- 卡片翻转动画展示
+- 显示可讨论的问题
 
-### Steps
+### 步骤
 
-1. Start a new Chat
-2. Select **Pixel Jam** as the agent
-3. Enter:
+1. 新建 Chat
+2. 选择 **Pixel Jam** 智能体
+3. 输入：
    ```
    New mode: Card Deck Shuffle. Every player opens the game, 
    taps, and gets a random card with a question
    ```
-4. Watch as it iterates on the UI
-5. Follow up to refine:
+4. 观察其对 UI 的迭代
+5. 继续追问优化：
    ```
    Add a cool 3D flip animation when revealing the card
    ```
    ```
    Make the card styling match the cyberpunk theme
    ```
-6. **Commit** when you're happy
+6. 满意后 **Commit**
 
-### What Pixel Jam Does Differently
+### Pixel Jam 的特点
 
-- Focuses on **visual design** first
-- Iterates on **UI/UX** before logic
-- Uses the frontend design instructions
-- Creates polished, animated interfaces
+- 优先关注 **视觉设计**
+- 在业务逻辑前先迭代 **UI/UX**
+- 深度利用前端设计指令
+- 输出更完整、可交付的动效界面
 
 ---
 
-## 🔍 Task 3: UX Review Agent
+## 🔍 任务 3：UX 评审智能体
 
-Combine MCP tools, custom workflows, and subagent isolation for powerful review capabilities.
+结合 MCP 工具、自定义流程与子智能体隔离能力，完成高质量体验评审。
 
-### Steps
+### 步骤
 
-1. Start a new Chat with **Pixel Jam**
-2. Enter:
+1. 使用 **Pixel Jam** 新建 Chat
+2. 输入：
    ```
    Run review
    ```
-3. When prompted, click **Allow for this Workspace** for Playwright tool access
-4. Watch as it:
-   - Takes screenshots of each page
-   - Analyzes usability issues
-   - Checks accessibility
-   - Reviews visual consistency
+3. 提示时点击 **Allow for this Workspace**，授权 Playwright 工具
+4. 观察其自动完成：
+   - 页面截图
+   - 可用性问题分析
+   - 可访问性检查
+   - 视觉一致性评估
 
-### What Gets Reviewed
+### 评审维度
 
-| Category | Checks |
-|----------|--------|
-| **Usability** | Navigation flow, button clarity, feedback |
-| **Accessibility** | Color contrast, keyboard nav, screen readers |
-| **Visual** | Consistency, spacing, alignment |
-| **Interaction** | Touch targets, hover states, animations |
+| 分类 | 检查项 |
+|------|--------|
+| **可用性** | 导航流程、按钮可理解性、反馈清晰度 |
+| **可访问性** | 对比度、键盘导航、屏幕阅读器支持 |
+| **视觉** | 一致性、间距、对齐 |
+| **交互** | 触控热区、悬停状态、动画表现 |
 
-### Follow-Up Actions
+### 评审后动作
 
-After the review:
+评审结束后可继续输入：
 ```
 File the critical findings as GitHub issues
 ```
@@ -156,55 +156,55 @@ Fix the accessibility issues you found
 Assign the navigation bug to a background agent
 ```
 
-✅ **Result:** A comprehensive UX review with actionable findings!
+✅ **结果：** 得到可执行的完整 UX 评审结论。
 
 ---
 
-## 🎯 Bonus Challenges
+## 🎯 加分挑战
 
-If you have time, try these:
+如果还有时间，可以继续尝试：
 
-| Challenge | Approach |
-|-----------|----------|
-| Fix UX issues | Delegate to background or cloud agent |
-| Multiple themes | Add theme picker to start screen |
-| Social sharing | Add share button to win state |
-| Leaderboard | Track and display high scores |
-| Sound effects | Add audio feedback for interactions |
-
----
-
-## ✅ Part 4 Complete!
-
-You've learned how to:
-- Use TDD agents for test-driven development
-- Build features with the Red-Green-Refactor cycle
-- Use design-focused agents like Pixel Jam
-- Run comprehensive UX reviews
-- Combine multiple agents for complex workflows
+| 挑战 | 建议方式 |
+|------|----------|
+| 修复 UX 问题 | 委托后台或云端智能体 |
+| 多主题切换 | 在开始页加入主题选择器 |
+| 社交分享 | 在胜利页加入分享按钮 |
+| 排行榜 | 记录并展示最高分 |
+| 音效反馈 | 为交互添加音频提示 |
 
 ---
 
-## 🎉 Workshop Complete!
+## ✅ 第 4 部分完成！
 
-Congratulations! You've completed the VS Code GitHub Copilot Agent Lab.
+你已经学会：
+- 使用 TDD 智能体推进测试驱动开发
+- 用 Red-Green-Refactor 循环构建功能
+- 使用 Pixel Jam 等设计导向智能体
+- 执行系统化 UX 评审
+- 组合多智能体处理复杂工作流
 
-### What You Built
+---
 
-- ✅ A fully redesigned Social Bingo app
-- ✅ Custom quiz themes
-- ✅ Scavenger Hunt mode (TDD-built)
-- ✅ Card Deck Shuffle mode (design-driven)
+## 🎉 工作坊完成！
 
-### What You Learned
+恭喜，你已完成 VS Code GitHub Copilot Agent Lab。
 
-1. **Context Engineering** — Teaching AI about your codebase
-2. **Agentic Primitives** — Background, cloud, and custom agents
-3. **Design-First Development** — UI iteration with AI assistance
-4. **Test-Driven Development** — Reliable code with TDD agents
+### 你构建了什么
 
-### Keep Going
+- ✅ 完整重设计的社交宾果应用
+- ✅ 自定义问答主题
+- ✅ 寻宝模式（TDD 构建）
+- ✅ 卡组洗牌模式（设计驱动）
 
-- 📺 [VS Code on YouTube](https://www.youtube.com/code)
-- 📖 [VS Code Copilot Docs](https://code.visualstudio.com/docs/copilot/overview)
+### 你掌握了什么
+
+1. **上下文工程**：让 AI 理解你的代码库
+2. **智能体基础能力**：后台、云端与自定义智能体
+3. **设计优先开发**：在 AI 协助下迭代 UI
+4. **测试驱动开发**：通过 TDD 智能体保证可靠性
+
+### 继续探索
+
+- 📺 [VS Code YouTube](https://www.youtube.com/code)
+- 📖 [VS Code Copilot 文档](https://code.visualstudio.com/docs/copilot/overview)
 - 🌟 [Awesome Copilot](https://github.com/github/awesome-copilot)

@@ -1,93 +1,93 @@
-# Part 3: Custom Quiz Master
+# 第 3 部分：自定义 Quiz Master
 
-[🎮 Live Demo](https://dotnet-presentations.github.io/vscode-github-copilot-agent-lab/) • [📚 Lab Guide](GUIDE.md) • [← Part 2](02-design.md)
-
----
-
-> ⏱️ **Time:** ~10 minutes
-
-Create your own specialized quiz themes using custom agents — workflows that go beyond generic coding prompts.
+[🎮 在线演示](https://dotnet-presentations.github.io/vscode-github-copilot-agent-lab/) • [📚 实验指南](GUIDE.md) • [← 第 2 部分](02-design.md)
 
 ---
 
-## 🎲 Understanding Custom Agents
+> ⏱️ **时长：** 约 10 分钟
 
-Custom agents are defined in `.github/agents/` and provide:
-- **Specialized knowledge** for specific tasks
-- **Consistent workflows** for repeatable processes
-- **Focused context** that improves output quality
-
-📄 Check out: `.github/agents/quiz-master.agent.md`
+通过自定义智能体创建专属问答主题，体验超越通用编程提示词的工作流。
 
 ---
 
-## 🎯 Task: Your Own Quiz Master
+## 🎲 理解自定义智能体
 
-### Steps
+自定义智能体定义在 `.github/agents/` 下，核心价值包括：
+- **任务专精知识**
+- **可复用的一致流程**
+- **更聚焦的上下文，提升输出质量**
 
-1. Start a **new Chat**
-2. Select **Quiz Master** as the custom agent (from the agent picker)
-3. Enter your theme:
+📄 参考：`.github/agents/quiz-master.agent.md`
+
+---
+
+## 🎯 任务：打造你的 Quiz Master
+
+### 步骤
+
+1. 新建一个 **Chat**
+2. 在智能体选择器中选择 **Quiz Master**
+3. 输入你的主题：
    ```
    Update questions to [YOUR THEME]
    ```
-   Or simply:
+   或者直接输入：
    ```
    Update quiz
    ```
 
-4. Review the generated questions
-5. Follow up for more creativity:
+4. 审阅生成的问题
+5. 继续追问以增强创意：
    ```
    Make them more chaotic and unexpected!
    ```
 
-### 🎭 Theme Ideas
+### 🎭 主题灵感
 
-| Category | Themes |
-|----------|--------|
-| **Professional** | Skill Bingo, Team Bingo, Work Culture Bingo |
-| **Personal** | Personality Bingo, Lifestyle Bingo, Travel Bingo |
-| **Tech** | Tech Life Bingo, Fandom Bingo, Dev Memes Bingo |
-| **Interactive** | Secret Challenge Bingo, Micro-Challenge Bingo, Mystery Bingo |
-| **Fun** | Office Humor Bingo, Chaos Bingo, Opposites Bingo |
-| **Deep** | Deep Chat Bingo, Creative Bingo, Reflective Bingo |
+| 分类 | 主题 |
+|------|------|
+| **专业向** | 技能宾果、团队宾果、职场文化宾果 |
+| **个人向** | 性格宾果、生活方式宾果、旅行宾果 |
+| **科技向** | 科技生活宾果、圈层文化宾果、开发者梗图宾果 |
+| **互动向** | 隐藏挑战宾果、微任务宾果、神秘宾果 |
+| **趣味向** | 办公室幽默宾果、混沌宾果、反差宾果 |
+| **深度向** | 深聊宾果、创意宾果、反思宾果 |
 
-### Theme Descriptions
+### 主题说明
 
-- **Skill Bingo** — Workplace or technical skills instead of personal facts
-- **Personality Bingo** — Preferences, quirks, and fun traits
-- **Secret Challenge Bingo** — Quick micro-tasks with people you meet
-- **Team Bingo** — Department or team categories
-- **Tech Life Bingo** — Coding languages, shortcuts, frameworks, dev memes
-- **Chaos Bingo** — Surprising, absurd, unpredictable prompts
-- **Opposites Bingo** — Find someone who is your opposite on specific axes
+- **技能宾果**：把个人事实替换为工作或技术技能
+- **性格宾果**：围绕偏好、习惯和有趣特质
+- **隐藏挑战宾果**：与现场成员完成快速微任务
+- **团队宾果**：按部门或团队特征设计题目
+- **科技生活宾果**：语言、快捷键、框架、开发者文化
+- **混沌宾果**：更意外、更荒诞、不可预测
+- **反差宾果**：寻找在某些维度与你相反的人
 
 ---
 
-## ☁️ Task: Cloud Quiz Generation
+## ☁️ 任务：云端生成题目
 
-Run the quiz master as a cloud agent for async generation.
+把 Quiz Master 作为云端智能体运行，实现异步生成。
 
-### Steps
+### 步骤
 
-1. Click `+` → **New cloud agent**
-2. Select **Quiz Master**
-3. Enter a different theme:
+1. 点击 `+` → **New cloud agent**
+2. 选择 **Quiz Master**
+3. 输入一个不同主题：
    ```
    Create a Tech Life Bingo with questions about 
    coding habits, IDE preferences, and developer culture
    ```
-4. Let it run in the background
-5. Review the PR when ready
+4. 让它在后台运行
+5. 完成后审阅 PR
 
-✅ **Result:** Custom agent generates creative, themed questions while you continue working.
+✅ **结果：** 你可以边做其他任务，边让自定义智能体产出有创意的主题题目。
 
 ---
 
-## 📝 Example Output: Tech Life Bingo
+## 📝 示例输出：科技生活宾果
 
-Here's what a Tech Life theme might generate:
+科技生活主题可能生成类似内容：
 
 ```
 ┌────────────────────────────────────────────────┐
@@ -107,19 +107,19 @@ Here's what a Tech Life theme might generate:
 
 ---
 
-## 💡 Pro Tips
+## 💡 进阶提示
 
-1. **Be specific** — "Make questions about startup culture" works better than "make it funny"
-2. **Iterate** — Follow up to refine the tone and creativity
-3. **Mix themes** — "Combine Tech Life with Chaos Bingo" for unexpected results
-4. **Test locally** — Run the app to see how questions look on the bingo grid
+1. **描述越具体越好**，例如“围绕创业文化”通常优于“更搞笑一点”
+2. **多轮迭代**，通过追问持续打磨语气与创意
+3. **混搭主题**，比如“科技生活 + 混沌宾果”会更有惊喜
+4. **本地运行验证**，查看题目在宾果网格中的实际呈现
 
 ---
 
-## ✅ Part 3 Complete!
+## ✅ 第 3 部分完成！
 
-You've learned how to:
-- Use custom agents for specialized workflows
-- Generate themed quiz questions
-- Run custom agents in the cloud
-- Iterate on agent output for better results
+你已经学会：
+- 用自定义智能体处理专用工作流
+- 生成主题化问答题目
+- 在云端运行自定义智能体
+- 通过多轮迭代优化输出质量

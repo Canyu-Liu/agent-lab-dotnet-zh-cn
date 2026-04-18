@@ -5,7 +5,7 @@
     disabled="@Square.IsFreeSpace"
     class="@GetCssClasses()"
     aria-pressed="@Square.IsMarked"
-    aria-label="@(Square.IsFreeSpace ? "Free space" : Square.Text)">
+    aria-label="@(Square.IsFreeSpace ? "免费位" : Square.Text)">
     <span class="wrap-break-word hyphens-auto">@Square.Text</span>
     @if (Square.IsMarked && !Square.IsFreeSpace)
     {

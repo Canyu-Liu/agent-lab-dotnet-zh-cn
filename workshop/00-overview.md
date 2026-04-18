@@ -1,56 +1,56 @@
 # 🎮 VS Code GitHub Copilot Agent Lab
 
-[🎮 Play Game](https://dotnet-presentations.github.io/vscode-github-copilot-agent-lab/) • [📚 Lab Guide](https://dotnet-presentations.github.io/vscode-github-copilot-agent-lab/docs/) • [← README](../README.md)
+[🎮 运行游戏](https://dotnet-presentations.github.io/vscode-github-copilot-agent-lab/) • [📚 实验指南](https://dotnet-presentations.github.io/vscode-github-copilot-agent-lab/docs/) • [← README](../README.md)
 
 ---
 
-> **Duration:** ~1 hour  
-> **Level:** Intermediate  
-> **Stack:** C# / .NET 10 / Blazor WebAssembly
+> **时长：** 约 1 小时  
+> **难度：** 中级  
+> **技术栈：** C# / .NET 10 / Blazor WebAssembly
 
-Welcome to Soc Ops — a hands-on workshop where you'll transform a simple Social Bingo app into something amazing using VS Code's Agent Mode with GitHub Copilot.
-
----
-
-## 📋 Quick Checklist
-
-Before you begin, verify:
-
-- [ ] VS Code **v1.107+** (no pending updates)
-- [ ] Signed in with **GitHub Copilot** (Pro, Business, or Enterprise)
-- [ ] Git installed
-- [ ] .NET 10 SDK installed
-- [ ] Chat panel open and Agent ready
-
-> 💡 **Tip:** Use the DevContainer for a pre-configured environment!
+欢迎来到 Soc Ops。你将通过动手实践，把一个简单的社交宾果应用，借助 VS Code 中 GitHub Copilot 的 Agent 模式升级为更完整的作品。
 
 ---
 
-## 🎯 What You'll Learn
+## 📋 快速检查清单
 
-| # | Skill | Description |
-|---|-------|-------------|
-| 1 | **Context Engineering** | Teach AI about your codebase with instructions |
-| 2 | **Agentic Primitives** | Use background agents, cloud agents, and custom workflows |
-| 3 | **Design-First Development** | Let AI iterate on UI while you guide the vision |
-| 4 | **Test-Driven Development** | Use TDD agents for reliable feature development |
+开始前请确认：
 
----
+- [ ] VS Code **v1.107+**（无待更新）
+- [ ] 已登录 **GitHub Copilot**（Pro / Business / Enterprise）
+- [ ] 已安装 Git
+- [ ] 已安装 .NET 10 SDK
+- [ ] Chat 面板已打开，Agent 已就绪
 
-## 📚 Lab Parts
-
-| Part | Title | Time | Description |
-|------|-------|------|-------------|
-| [**01**](01-setup.md) | Setup & Context Engineering | 15 min | Clone, configure, and teach the AI about your project |
-| [**02**](02-design.md) | Design-First Frontend | 15 min | Redesign the UI with creative themes |
-| [**03**](03-quiz-master.md) | Custom Quiz Master | 10 min | Create your own quiz themes with custom agents |
-| [**04**](04-multi-agent.md) | Multi-Agent Development | 20 min | Build new features with TDD and design agents |
+> 💡 **提示：** 推荐使用 DevContainer，开箱即用的预配置环境更省心。
 
 ---
 
-## 💡 Pro Tips
+## 🎯 你将学到
 
-1. **Keep the browser open** — Watch live updates as you code
-2. **Commit often** — Save working states frequently
-3. **Use checkpoints** — Revert unexpected changes with chat Checkpoints & Undo
-4. **📌 Pin this guide** — Keep it visible while you work
+| # | 技能 | 说明 |
+|---|------|------|
+| 1 | **上下文工程** | 用指令让 AI 真正理解你的代码库 |
+| 2 | **智能体基础能力** | 使用后台智能体、云端智能体和自定义工作流 |
+| 3 | **设计优先开发** | 让 AI 迭代 UI，你负责把控设计方向 |
+| 4 | **测试驱动开发** | 使用 TDD 智能体稳定推进功能开发 |
+
+---
+
+## 📚 工作坊章节
+
+| 章节 | 标题 | 时长 | 说明 |
+|------|------|------|------|
+| [**01**](01-setup.md) | 环境准备与上下文工程 | 15 分钟 | 克隆、配置并让 AI 了解你的项目 |
+| [**02**](02-design.md) | 设计优先前端 | 15 分钟 | 用创意主题重塑界面 |
+| [**03**](03-quiz-master.md) | 自定义 Quiz Master | 10 分钟 | 使用自定义智能体创建专属题目主题 |
+| [**04**](04-multi-agent.md) | 多智能体开发 | 20 分钟 | 结合 TDD 与设计智能体开发新功能 |
+
+---
+
+## 💡 进阶提示
+
+1. **让浏览器常驻打开**，边写边看实时更新
+2. **勤提交**，随时保存可运行状态
+3. **善用检查点**，用 Checkpoints 与 Undo 快速回退
+4. **📌 固定本指南**，实操时保持可见

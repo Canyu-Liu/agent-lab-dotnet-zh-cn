@@ -1,57 +1,57 @@
-# 🎉 Workshop Complete!
+# 🎉 工作坊完成！
 
-[🎮 Play Game](https://dotnet-presentations.github.io/vscode-github-copilot-agent-lab/) • [📚 Lab Guide](https://dotnet-presentations.github.io/vscode-github-copilot-agent-lab/docs/) • [← Part 4](04-multi-agent.md)
+[🎮 运行游戏](https://dotnet-presentations.github.io/vscode-github-copilot-agent-lab/) • [📚 实验指南](https://dotnet-presentations.github.io/vscode-github-copilot-agent-lab/docs/) • [← 第 4 部分](04-multi-agent.md)
 
 ---
 
-## Congratulations! 🎊
+## 恭喜完成！🎊
 
-You've completed the **VS Code GitHub Copilot Agent Lab**!
+你已完成 **VS Code GitHub Copilot Agent Lab**！
 
 <div id="confetti-btn-container"></div>
 
 ---
 
-## 🏆 What You Built
+## 🏆 你构建了什么
 
-- ✅ A fully redesigned Social Bingo app
-- ✅ Custom quiz themes with Quiz Master agent
-- ✅ Scavenger Hunt mode (TDD-built)
-- ✅ Card Deck Shuffle mode (design-driven)
-- ✅ Comprehensive UX review
-
----
-
-## 🧠 What You Learned
-
-| Skill | Description |
-|-------|-------------|
-| **Context Engineering** | Teaching AI about your codebase with instructions |
-| **Agentic Primitives** | Background agents, cloud agents, and custom workflows |
-| **Design-First Development** | UI iteration with AI assistance |
-| **Test-Driven Development** | Reliable code with TDD agents |
+- ✅ 完整重设计的社交宾果应用
+- ✅ 使用 Quiz Master 智能体生成自定义问答主题
+- ✅ 寻宝模式（TDD 构建）
+- ✅ 卡组洗牌模式（设计驱动）
+- ✅ 全面的 UX 评审流程
 
 ---
 
-## 🚀 Keep Going!
+## 🧠 你掌握了什么
 
-### Resources
+| 技能 | 说明 |
+|------|------|
+| **上下文工程** | 通过指令让 AI 理解你的代码库 |
+| **智能体基础能力** | 后台智能体、云端智能体与自定义工作流 |
+| **设计优先开发** | 在 AI 协助下高效迭代 UI |
+| **测试驱动开发** | 使用 TDD 智能体构建可靠代码 |
 
-- 📺 [VS Code on YouTube](https://www.youtube.com/code)
-- 📖 [VS Code Copilot Docs](https://code.visualstudio.com/docs/copilot/overview)
+---
+
+## 🚀 继续前进
+
+### 资源
+
+- 📺 [VS Code YouTube](https://www.youtube.com/code)
+- 📖 [VS Code Copilot 文档](https://code.visualstudio.com/docs/copilot/overview)
 - 🌟 [Awesome Copilot](https://github.com/github/awesome-copilot)
 
-### Next Steps
+### 下一步建议
 
-1. **Share your creation** — Show off your themed bingo app!
-2. **Try more themes** — Use Pixel Jam for more design variations
-3. **Add features** — Leaderboards, sound effects, multiplayer?
-4. **Teach others** — Run this workshop for your team
+1. **分享作品**：把你的主题宾果应用展示出来
+2. **尝试更多风格**：用 Pixel Jam 继续探索设计变体
+3. **扩展功能**：排行榜、音效、多人模式
+4. **带团队实践**：把这套工作坊用于团队培训
 
 ---
 
-## 💜 Thank You!
+## 💜 感谢参与
 
-Thanks for joining us on this journey into AI-assisted development.
+感谢你参与这次 AI 辅助开发之旅。
 
-We can't wait to see what you build next!
+期待看到你接下来打造的作品！

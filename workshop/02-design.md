@@ -1,104 +1,104 @@
-# Part 2: Design-First Frontend
+# 第 2 部分：设计优先前端
 
-[🎮 Live Demo](https://dotnet-presentations.github.io/vscode-github-copilot-agent-lab/) • [📚 Lab Guide](https://dotnet-presentations.github.io/vscode-github-copilot-agent-lab/docs/) • [← Part 1](01-setup.md)
-
----
-
-> ⏱️ **Time:** ~15 minutes
-
-Now that your repo context is engineered, let's get creative! You'll redesign the entire UI using AI-assisted development.
+[🎮 在线演示](https://dotnet-presentations.github.io/vscode-github-copilot-agent-lab/) • [📚 实验指南](https://dotnet-presentations.github.io/vscode-github-copilot-agent-lab/docs/) • [← 第 1 部分](01-setup.md)
 
 ---
 
-## 🎨 Task 1: Make It Yours
+> ⏱️ **时长：** 约 15 分钟
 
-Use **Plan Mode** to start any bigger work item. Iterate on the plan (2+ times!) with tweaks and clarifications.
+现在仓库上下文已经准备好，接下来进入创意阶段。你将使用 AI 辅助开发重构整个 UI。
 
-### Steps
+---
 
-1. In Chat, switch to **Plan Mode** (toggle at bottom)
-2. Enter your vision:
+## 🎨 任务 1：做出你的风格
+
+较大的任务建议先用 **Plan 模式**。先迭代计划（至少 2 次），再执行实现。
+
+### 步骤
+
+1. 在 Chat 中切换到 **Plan Mode**（底部开关）
+2. 输入你的设计愿景：
    ```
    Let's do a full redesign. Make it [YOUR THEME]
    ```
-3. Review the generated plan
-4. Ask for adjustments until you're happy
-5. Click **Implement** to execute
+3. 查看生成的计划
+4. 持续提出调整，直到你满意
+5. 点击 **Implement** 执行
 
-### 🎭 Theme Ideas
+### 🎭 主题灵感
 
-Pick one that speaks to you:
+选择一个你喜欢的方向：
 
-| Category | Themes |
-|----------|--------|
-| **Minimal** | Minimalist Mono, Scandinavian Calm, Desert Sand Minimal |
-| **Retro** | Retro Terminal Green, Pixel Arcade Style, Vaporwave Sunset |
-| **Dark** | Cyberpunk Neon, Dark Mode Noir, Space Galaxy Glow |
-| **Playful** | Playful Candy Pop, Toybox Primary Colors, Anime Bubble |
-| **Professional** | Corporate Clean Blue, Gradient Glass UI, Metallic Chrome |
-| **Creative** | Brutalist Blocks, Geometric Memphis, Bold Constructivist |
-| **Cozy** | Cozy Coffee Shop, Soft Pastel Clouds, Notebook Doodle |
-| **Unique** | Skeuomorphic Stickers, Paper Card Cutouts, Chalkboard |
+| 分类 | 主题 |
+|------|------|
+| **极简** | 极简黑白、北欧静谧、沙漠浅色极简 |
+| **复古** | 复古绿终端、像素街机、蒸汽波日落 |
+| **暗色** | 赛博霓虹、暗黑电影感、银河辉光 |
+| **活泼** | 糖果弹跳、玩具箱主色调、动漫气泡 |
+| **专业** | 企业蓝、渐变玻璃 UI、金属铬风 |
+| **创意** | 粗野主义方块、几何孟菲斯、构成主义 |
+| **治愈** | 咖啡馆、柔和粉彩云、手账涂鸦 |
+| **独特** | 拟物贴纸、纸卡拼贴、黑板粉笔 |
 
-✅ **Result:** Frontend and CSS utility instructions combine to build a beautiful design.
+✅ **结果：** 前端代码与 CSS 工具类指令协同产出完整视觉风格。
 
 ---
 
-## 📝 Task 2: Keep Instructions Updated
+## 📝 任务 2：同步更新指令
 
-When you make major architecture, design, or dependency changes, update your instructions!
+当架构、设计或依赖发生较大变化时，要同步更新指令文件。
 
-### Steps
+### 步骤
 
-1. After your redesign, follow up:
+1. 重设计完成后继续输入：
    ```
    Add a design guide section to copilot-instructions.md
    ```
-2. Review the changes
-3. **Commit and push**
+2. 审阅变更
+3. **Commit 并 push**
 
-> 💡 Check that GitHub Pages is updating with your new design!
+> 💡 记得检查 GitHub Pages 是否已展示你的新设计。
 
 ---
 
-## 🚀 Task 3: Scale Exploration with Cloud Agents
+## 🚀 任务 3：用云端智能体并行探索
 
-Generate multiple design variations in parallel using cloud agents.
+使用云端智能体并行生成多个设计方案。
 
-### Steps
+### 步骤
 
-1. Start a **new Chat** in Plan Mode
-2. Enter:
+1. 在 Plan 模式开启 **新 Chat**
+2. 输入：
    ```
    Redesign the start screen as a more engaging landing page
    ```
-3. Note the variations suggested in the plan
-4. Run the exploration prompt:
+3. 观察计划中建议的变化方向
+4. 运行探索提示词：
    ```
    /cloud-explore design variations
    ```
-   📄 See `.github/prompts/cloud-explore.prompt.md`
+   📄 参考 `.github/prompts/cloud-explore.prompt.md`
 
-5. Check **Agent Sessions** to track the 3 new cloud agents
-6. Click any session to follow progress or open in web
+5. 在 **Agent Sessions** 查看 3 个新云端智能体进度
+6. 点击任一会话查看详情或在网页中打开
 
-### What's Happening
+### 背后发生了什么
 
-The prompt spins up **3 parallel cloud agents**, each exploring a different design direction. They'll:
-- Create branches
-- Implement variations
-- Take screenshots
-- Open PRs for your review
+该提示会启动 **3 个并行云端智能体**，分别探索不同设计方向。它们会：
+- 创建分支
+- 实现各自方案
+- 生成截图
+- 创建 PR 供你评审
 
-✅ **Result:** 3 design variations to compare, all running in parallel!
+✅ **结果：** 你将得到 3 个可对比的并行设计方案。
 
-> ⏰ These take a few minutes. Continue to Part 3 while they run.
+> ⏰ 这一步通常需要几分钟。可以先继续第 3 部分。
 
 ---
 
-## 🖼️ Design Showcase
+## 🖼️ 设计展示
 
-Here's what the **Cyberpunk Neon** theme looks like:
+下面是 **赛博霓虹** 主题示意：
 
 ```
 ┌─────────────────────────────────────────────┐
@@ -124,10 +124,10 @@ Here's what the **Cyberpunk Neon** theme looks like:
 
 ---
 
-## ✅ Part 2 Complete!
+## ✅ 第 2 部分完成！
 
-You've learned how to:
-- Use Plan Mode for complex design tasks
-- Iterate on plans before implementing
-- Keep instructions updated with changes
-- Scale exploration with parallel cloud agents
+你已经学会：
+- 用 Plan 模式处理复杂设计任务
+- 在实现前充分迭代计划
+- 变更后同步更新指令
+- 用并行云端智能体扩大探索范围
